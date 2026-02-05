@@ -27,44 +27,33 @@ export function Logo({ className = '', size = 'md' }: LogoProps) {
                             <stop offset="50%" stopColor="#FFCD00" />
                             <stop offset="100%" stopColor="#CE1126" />
                         </linearGradient>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                            <feMerge>
-                                <feMergeNode in="coloredBlur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
                     </defs>
 
-                    {/* Shield / Badge Background - Dark Hexagon */}
+                    {/* Circle Background */}
+                    <circle cx="50" cy="50" r="45" fill="#09090b" stroke="url(#senegalGrad)" strokeWidth="3" />
+
+                    {/* Muscular Arm Icon */}
                     <path
-                        d="M50 5 L92 26 L92 74 L50 95 L8 74 L8 26 Z"
-                        fill="#09090b"
-                        stroke="url(#senegalGrad)"
-                        strokeWidth="2.5"
+                        d="M30 65 C30 65 25 75 35 80 C45 85 50 75 50 75 L55 65 C55 65 65 60 75 60 C85 60 90 50 90 40 C90 30 80 25 70 30 C60 35 55 45 55 45 L50 45 C40 40 35 50 30 65 Z"
+                        fill="url(#senegalGrad)"
+                        stroke="#fff"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="group-hover:opacity-90 transition-opacity"
                     />
 
-                    {/* Abstract Muscle / Lion Mane Lines */}
-                    <path d="M50 18 L75 35 V65 L50 80 L25 65 V35 Z" stroke="white" strokeWidth="0.5" strokeOpacity="0.1" fill="none" />
+                    {/* Bicep definition details */}
+                    <path d="M60 40 Q70 30 80 40" stroke="#09090b" strokeWidth="2" fill="none" opacity="0.5" />
+                    <path d="M55 50 Q45 55 40 65" stroke="#09090b" strokeWidth="2" fill="none" opacity="0.5" />
 
-                    {/* Dumbbell integrated with Lion/Face shape */}
-                    {/* Central Bar / Nose */}
-                    <path d="M48 68 H52 V82 H48 Z" fill="#555" />
-
-                    {/* Weights */}
-                    <path d="M35 65 H45 V85 H35 Z" fill="url(#senegalGrad)" />
-                    <path d="M55 65 H65 V85 H55 Z" fill="url(#senegalGrad)" />
-
-                    {/* Star of Senegal (Prominent) */}
+                    {/* Star of Senegal (Small, as accent) */}
                     <path
-                        d="M50 25 L56 42 H74 L60 54 L65 70 L50 60 L35 70 L40 54 L26 42 H44 Z"
+                        d="M75 15 L77 20 H82 L78 23 L80 28 L75 25 L70 28 L72 23 L68 20 H73 Z"
                         fill="#FFCD00"
                         stroke="#09090b"
-                        strokeWidth="1"
-                        className="group-hover:animate-pulse"
+                        strokeWidth="0.5"
                     />
-
-                    {/* Letters AG visible subtly or omitted in favor of symbol */}
                 </svg>
             </div>
         </div>
