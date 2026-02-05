@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sénégal Theme - Couleurs du drapeau */
+    --background: 220 20% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 18% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 18% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Vert du Sénégal - Couleur principale */
+    --primary: 150 100% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Jaune du Sénégal - Couleur secondaire */
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 220 20% 4%;
+
+    /* Rouge du Sénégal - Couleur accent */
+    --accent: 352 85% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 150 100% 20%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, .display-font {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  /* Gradient sénégalais */
+  .text-gradient-senegal {
+    @apply bg-gradient-to-r from-[#00693E] via-[#FFCD00] to-[#CE1126] bg-clip-text text-transparent;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-senegal {
+    background: linear-gradient(135deg, #00693E 0%, #FFCD00 50%, #CE1126 100%);
+  }
+
+  .bg-gradient-senegal-soft {
+    background: linear-gradient(135deg, rgba(0, 105, 62, 0.1) 0%, rgba(255, 205, 0, 0.1) 50%, rgba(206, 17, 38, 0.1) 100%);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 40px rgba(0, 105, 62, 0.4);
+  }
+  
+  .glow-yellow {
+    box-shadow: 0 0 40px rgba(255, 205, 0, 0.4);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 40px rgba(206, 17, 38, 0.4);
+  }
+  
+  .glow-sm {
+    box-shadow: 0 0 20px rgba(0, 105, 62, 0.2);
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.6s ease-out;
+  }
+}
