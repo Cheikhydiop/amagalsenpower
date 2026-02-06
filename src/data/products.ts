@@ -94,26 +94,48 @@ export const products: Product[] = [
 
   // --- Créatine ---
   {
-    id: 'c1',
-    name: 'Créatine Monohydrate',
+    id: 'c_90g',
+    name: 'Créatine Monohydrate (90g)',
     category: 'creatine',
-    price: 18000,
-    image: '/asset/produit7.jpeg',
-    description: 'Créatine monohydrate micronisée pure à 100%. Augmente la force physique et l\'explosivité.',
-    stock: 60,
-    featured: true,
-    badge: 'ESSENTIEL',
+    price: 10000,
+    image: '/asset/creatine_monohydrate_1.jpeg',
+    description: 'Format pratique pour débuter. Créatine monohydrate pure pour booster vos performances.',
+    stock: 50,
+    badge: 'DÉCOUVERTE',
     brand: 'AmaGalsen'
   },
   {
-    id: 'c2',
-    name: 'Créatine HCL',
+    id: 'c_150g',
+    name: 'Créatine Monohydrate (150g)',
     category: 'creatine',
-    price: 25000,
-    image: '/asset/produit8.jpeg',
-    description: 'Créatine Hydrochloride ultra-concentrée. Pas de rétention d\'eau, pas de ballonnement.',
-    stock: 40,
-    brand: 'AmaGalsen Pro'
+    price: 12000,
+    image: '/asset/creatine_monohydrate_1.jpeg',
+    description: 'Format standard. Idéal pour une cure de 1 mois. Améliore la force et la récupération.',
+    stock: 45,
+    featured: true,
+    brand: 'AmaGalsen'
+  },
+  {
+    id: 'c_253g',
+    name: 'Créatine Monohydrate (253g)',
+    category: 'creatine',
+    price: 15000,
+    image: '/asset/creatine_monohydrate_2.jpeg',
+    description: 'Format économique. Haute pureté pour des résultats optimaux à long terme.',
+    stock: 30,
+    badge: 'BEST SELLER',
+    brand: 'AmaGalsen'
+  },
+  {
+    id: 'c_403g',
+    name: 'Créatine Monohydrate (403g)',
+    category: 'creatine',
+    price: 20000,
+    image: '/asset/creatine_monohydrate_2.jpeg',
+    description: 'Format XL. Pour les athlètes sérieux. Le meilleur rapport qualité/prix.',
+    stock: 25,
+    badge: 'FORMAT PRO',
+    brand: 'AmaGalsen'
   },
 
   // --- Accessoires ---
